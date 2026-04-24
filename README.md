@@ -1,36 +1,54 @@
-# 🚀 Vision + LLM Image QA System
+# 🧠 Vision Chat Assistant (YOLO + BLIP + LLM)
 
-An end-to-end **multimodal AI application** that combines **Computer Vision** and **Large Language Models (LLMs)** to understand images and answer natural language questions.
-
----
-
-## 🔥 Demo
-
-Upload an image → AI will:
-
-* Detect objects (YOLOv8)
-* Generate image captions (BLIP)
-* Answer questions about the image (LLM)
-
-> 💡 Example:
-
-```json
-{
-  "objects": {"person": 2, "dog": 1},
-  "caption": "two people sitting with a dog",
-  "answer": "There are 2 people in the image."
-}
-```
+An end-to-end **multimodal AI system** that combines **Computer Vision** and **Large Language Models (LLMs)** to understand images and answer natural language questions — with an interactive **ChatGPT-style UI**.
 
 ---
 
-## 🧠 Key Features
+## 🚀 Demo
+
+Upload an image → Ask a question → Get:
+
+* 🎯 **Highlighted objects** based on your question
+* 💬 **Natural language answers** (streaming like ChatGPT)
+* 🧠 **Context-aware reasoning**
+
+---
+
+## ✨ Key Features
 
 * 🔍 **Object Detection** using YOLOv8
 * 📝 **Image Captioning** using BLIP
 * 🤖 **Question Answering** using LLM (OpenAI API)
-* 🌐 **Interactive Web App** built with Streamlit
-* ⚡ Real-time image analysis and reasoning
+* 💬 **Chat UI (multi-turn)** like ChatGPT
+* ✍️ **Streaming responses** (typing effect)
+* 🎯 **Query-aware object highlighting**
+* 🎨 Clean and modern UI with Streamlit
+
+---
+
+## 🧠 System Architecture
+
+```
+Image
+ ├── YOLOv8 → Object Detection
+ ├── BLIP → Caption Generation
+ └── LLM → Question Answering
+```
+
+---
+
+## 📸 Example
+
+**User Question:**
+
+```
+Where is the dog?
+```
+
+**System Output:**
+
+* Highlights the dog in the image 🟩
+* Returns a clear, natural language answer
 
 ---
 
@@ -45,32 +63,32 @@ Upload an image → AI will:
 
 ---
 
-## 🔄 System Pipeline
+## 🔄 Full Pipeline
 
 ```
 Image 
   ↓
 YOLOv8 (Object Detection)
   ↓
-Extracted Objects + Count
+Filtered Objects
   ↓
 BLIP (Image Captioning)
   ↓
-Caption + Structured Data
+Caption + Context
   ↓
-LLM (Question Answering)
+LLM (Reasoning & QA)
   ↓
-Final Answer
+Final Answer + Highlight
 ```
 
 ---
 
 ## 🚀 How to Run Locally
 
-### 1. Clone repo
+### 1. Clone repository
 
 ```bash
-git clone https://github.com/yourusername/vision-llm-image-qa.git
+git clone https://github.com/anhtruc095/vision-llm-image-qa.git
 cd vision-llm-image-qa
 ```
 
@@ -78,7 +96,8 @@ cd vision-llm-image-qa
 
 ```bash
 python -m venv venv
-source venv/bin/activate   # Mac/Linux
+source venv/bin/activate      # Mac/Linux
+venv\Scripts\activate         # Windows
 ```
 
 ### 3. Install dependencies
@@ -87,68 +106,116 @@ source venv/bin/activate   # Mac/Linux
 pip install -r requirements.txt
 ```
 
-### 4. Set API key
+### 4. Setup API key
 
 ```bash
 export OPENAI_API_KEY="your_api_key"
 ```
 
-### 5. Run app
+### 5. Run the app
 
 ```bash
-python -m streamlit run app.py
+streamlit run app.py
 ```
-
----
-
-## 📸 Screenshots
-
-👉 (Add your demo screenshot here)
 
 ---
 
 ## 🧠 Technical Highlights
 
-* Applied **confidence thresholding** to filter low-quality detections from YOLO
-* Combined **object detection + captioning** to improve semantic understanding
-* Designed a **multimodal pipeline** to bridge vision and language reasoning
-* Optimized inference by loading models only once
+* Applied **confidence thresholding** to filter low-quality detections
+* Designed **query-aware highlighting** (only show relevant objects)
+* Combined **vision + language models** for better reasoning
+* Built **ChatGPT-style UI with streaming responses**
+* Optimized performance by **loading models once**
 
 ---
 
 ## ⚠️ Limitations
 
-* May miss **small or occluded objects** due to dataset limitations
-* Performance affected by **lighting conditions and image quality**
-* LLM answers depend on extracted features (not raw image input)
+* May miss **small or occluded objects**
+* Performance depends on **image quality & lighting**
+* LLM answers rely on extracted features (not raw vision)
 
 ---
 
 ## 🚀 Future Improvements
 
-* Add OCR for text recognition
-* Support video input + object tracking
-* Fine-tune YOLO on custom dataset
-* Improve UI/UX for better interaction
+* 🔥 Semantic matching (e.g., “animal” → dog)
+* 💬 Long-term conversational memory
+* 🎯 Attention heatmap visualization
+* ⚡ Faster inference (quantization / optimization)
+* 🌐 Deploy to cloud (Streamlit / Docker)
+
+---
+
+## 💼 Use Cases
+
+* AI-powered visual assistants
+* Image search & understanding
+* Smart surveillance systems
+* Human-AI interaction research
+
+---
+
+## 📁 Project Structure
+
+```
+vision-llm-image-qa/
+│
+├── core/
+│   ├── caption.py
+│   ├── vqa.py
+│   └── pipeline.py
+│
+├── data/
+│   └── samples/
+│
+├── app.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🖼️ Demo Preview
+
+> 
+
+<img width="750" height="691" alt="Ảnh màn hình 2026-04-24 lúc 10 33 14" src="https://github.com/user-attachments/assets/2fcc40ff-84f9-40a1-8fbd-95a11579a8a4" />
+<img width="733" height="569" alt="Ảnh màn hình 2026-04-24 lúc 10 33 28" src="https://github.com/user-attachments/assets/5cc7b11c-0539-43e8-8490-10983bd43093" />
+<img width="747" height="698" alt="Ảnh màn hình 2026-04-24 lúc 10 33 43" src="https://github.com/user-attachments/assets/a45ed262-742f-4550-aa38-920957069a35" />
+<img width="747" height="215" alt="Ảnh màn hình 2026-04-24 lúc 10 33 49" src="https://github.com/user-attachments/assets/00de2928-cca4-4cad-b881-480685d271de" />
+
+
+---
+
+## 💼 Resume Highlights
+
+* Built a multimodal AI system combining YOLOv8, BLIP, and LLMs
+* Implemented query-aware object highlighting for explainability
+* Developed a ChatGPT-style UI with real-time streaming responses
+* Designed modular architecture for scalable AI applications
 
 ---
 
 ## 📌 Conclusion
 
-This project demonstrates how to build a **real-world AI system** by integrating:
+This project demonstrates how to integrate:
 
 * Computer Vision (perception)
 * Language Models (reasoning)
 
-👉 A practical step toward building systems similar to **GPT-4 Vision**.
+👉 A practical step toward systems like **GPT-4 Vision**.
 
 ---
 
 ## 👨‍💻 Author
 
-* Your Name
-* GitHub: https://github.com/yourusername
+**Ton Anh Truc**
+GitHub: https://github.com/anhtruc095
 
 ---
 
-⭐ If you find this project useful, feel free to star the repo!
+## ⭐ If you find this project useful
+
+Give it a star ⭐ on GitHub!
