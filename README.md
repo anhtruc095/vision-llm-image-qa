@@ -179,12 +179,7 @@ vision-llm-image-qa/
 
 ## 🖼️ Demo Preview
 
-> 
-
-<img width="750" height="691" alt="Ảnh màn hình 2026-04-24 lúc 10 33 14" src="https://github.com/user-attachments/assets/2fcc40ff-84f9-40a1-8fbd-95a11579a8a4" />
-<img width="733" height="569" alt="Ảnh màn hình 2026-04-24 lúc 10 33 28" src="https://github.com/user-attachments/assets/5cc7b11c-0539-43e8-8490-10983bd43093" />
-<img width="747" height="698" alt="Ảnh màn hình 2026-04-24 lúc 10 33 43" src="https://github.com/user-attachments/assets/a45ed262-742f-4550-aa38-920957069a35" />
-<img width="747" height="215" alt="Ảnh màn hình 2026-04-24 lúc 10 33 49" src="https://github.com/user-attachments/assets/00de2928-cca4-4cad-b881-480685d271de" />
+> /Users/chuclinh/vision-llm-project/demo.mp4
 
 
 ---
