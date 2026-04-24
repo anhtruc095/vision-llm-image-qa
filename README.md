@@ -179,7 +179,7 @@ vision-llm-image-qa/
 
 ## 🖼️ Demo Preview
 
-> /Users/chuclinh/vision-llm-project/demo.mp4
+![demo](output.gif)
 
 
 ---
