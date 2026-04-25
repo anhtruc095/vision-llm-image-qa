@@ -66,21 +66,11 @@ Where is the dog?
 ## 🔄 Full Pipeline
 
 ```
-Image 
-  ↓
-YOLOv8 (Object Detection)
-  ↓
-Filtered Objects
-  ↓
-BLIP (Image Captioning)
-  ↓
-Caption + Context
-  ↓
-LLM (Reasoning & QA)
-  ↓
-Final Answer + Highlight
-```
+<p align="center">
+  <img src="architecture.png" width="800"/>
+</p>
 
+<p align="center"><i>Figure: Vision-LLM Image QA Pipeline</i></p>
 ---
 
 ## 🚀 How to Run Locally
