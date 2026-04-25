@@ -65,12 +65,14 @@ Where is the dog?
 
 ## 🔄 Full Pipeline
 
-```
+
 <p align="center">
   <img src="architecture.png" width="800"/>
 </p>
 
 <p align="center"><i>Figure: Vision-LLM Image QA Pipeline</i></p>
+
+
 ---
 
 ## 🚀 How to Run Locally
